@@ -30,6 +30,8 @@ android {
         versionName = "1.0"
 
         buildConfigField("String", "API_URL", "\"$apiUrl\"")
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
     }
 
     buildTypes {
@@ -82,5 +84,9 @@ dependencies {
 
     debugImplementation(libs.androidx.ui.tooling)
     testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.test.ext.junit)
+    androidTestImplementation(libs.androidx.test.runner)
+    androidTestImplementation(libs.kotlinx.coroutines.test)
+
 
 }
